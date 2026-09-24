@@ -1,0 +1,230 @@
+/* ============================================================
+   ESCAPE ROOM FYQ – ESTILOS
+   Autor: Samuel López Melián
+   ============================================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0a1f33, #0d3b4c);
+    color: white;
+}
+
+/* PANEL LATERAL */
+.escalera {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 120px;
+    height: 100vh;
+    background: rgba(0, 255, 255, 0.12);
+    padding: 15px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    box-shadow: 2px 0 10px rgba(0,255,255,0.3);
+    overflow-y: auto;
+}
+
+.escalera h3 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.escalera p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+}
+
+/* PANTALLA INICIAL */
+.start-screen {
+    margin-left: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.left {
+    flex: 1;
+    text-align: center;
+}
+
+.right {
+    flex: 1;
+    max-width: 450px;
+}
+
+.hero-image {
+    width: 70%;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
+
+.input-start {
+    width: 90%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1rem;
+}
+
+/* BOTÓN PRINCIPAL */
+.start-button {
+    background: #00c8ff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.start-button:hover {
+    background: #00e0ff;
+    transform: scale(1.05);
+}
+
+/* ZONA DE RETOS */
+.game-area {
+    margin-left: 140px;
+    display: none;
+    opacity: 0;
+    padding: 40px;
+    text-align: center;
+    transition: opacity 1s ease;
+}
+
+.game-area input {
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: none;
+    width: 200px;
+    margin-top: 15px;
+}
+
+.btn {
+    background: #00c8ff;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00e0ff;
+}
+
+/* CANDADO */
+.candado-box {
+    margin-left: 140px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.candado-line {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.slot {
+    background: rgba(0,255,255,0.2);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    box-shadow: 0 0 6px rgba(0,255,255,0.4);
+}
+
+/* PANTALLA FINAL */
+.final-container {
+    margin-left: 140px;
+    text-align: center;
+    padding: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.final-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.final-img {
+    width: 40%;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,255,255,0.4);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.final-code-box {
+    text-align: left;
+    background: rgba(0,255,255,0.1);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+}
+
+.final-code-box h3 {
+    margin-top: 0;
+    color: #00e0ff;
+}
+
+.final-code {
+    font-size: 1.3rem;
+    letter-spacing: 4px;
+    color: #00ff9d;
+}
+
+/* BOTÓN DE REINICIO */
+.restart-button {
+    background: #ff6b6b;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: 0.3s;
+    color: white;
+}
+
+.restart-button:hover {
+    background: #ff8787;
+    transform: scale(1.05);
+}
+
+/* AUTORÍA */
+#autor {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    background: rgba(0, 255, 255, 0.15);
+    padding: 6px 12px;
+    border-radius: 6px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 8px rgba(0,255,255,0.4);
+    z-index: 9999;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

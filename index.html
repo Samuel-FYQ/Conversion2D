@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room FYQ – Pingu atrapado</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Librería para exportar diploma -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <!-- PANEL LATERAL DE ESCALERA -->
+    <aside class="escalera">
+        <h3>Escalera de unidades</h3>
+        <p>km</p><p>hm</p><p>dam</p><p>m</p><p>dm</p><p>cm</p><p>mm</p>
+        <hr>
+        <p>kL</p><p>hL</p><p>daL</p><p>L</p><p>dL</p><p>cL</p><p>mL</p>
+        <hr>
+        <p>kg</p><p>hg</p><p>dag</p><p>g</p><p>dg</p><p>cg</p><p>mg</p>
+    </aside>
+
+    <!-- PANTALLA INICIAL -->
+    <div class="start-screen">
+        <div class="left">
+            <img src="pingu_atrapado.png" alt="Pingu atrapado" class="hero-image">
+        </div>
+
+        <div class="right">
+            <h1>¡Pingu está atrapado!</h1>
+            <p>
+                Para comenzar, escribe tu nombre y tu curso.
+            </p>
+
+            <input type="text" id="nombreAlumno" placeholder="Tu nombre..." class="input-start">
+            <input type="text" id="cursoAlumno" placeholder="Ej: 2ºESO B" class="input-start">
+
+            <button id="startBtn" class="start-button">Comenzar</button>
+        </div>
+    </div>
+
+    <!-- ZONA DE RETOS -->
+    <div id="gameArea" class="game-area"></div>
+
+    <!-- CANDADO DINÁMICO -->
+    <div id="candadoBox" class="candado-box"></div>
+
+    <!-- DIPLOMA FINAL OCULTO -->
+    <div id="diplomaFinal" 
+         style="display:none; 
+                width:480px; 
+                padding:25px; 
+                border-radius:20px;
+                background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+                box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+                text-align:center;
+                font-family: 'Arial', sans-serif;">
+
+        <h2 style="margin-bottom:5px; font-size:28px; color:#333;">🎓 Diploma de Escape Room</h2>
+        <p style="margin-top:-5px; margin-bottom:20px; color:#666;">Conversión de Unidades – FYQ</p>
+
+        <h3 id="diplomaNombre" style="font-size:22px; color:#222; margin-bottom:5px;"></h3>
+        <h4 id="diplomaCurso" style="font-size:18px; color:#555; margin-top:0;"></h4>
+
+        <p style="margin-top:20px; font-size:18px; color:#333;">
+            <strong>Código desbloqueado:</strong>
+        </p>
+
+        <div id="diplomaCodigo"
+             style="margin-top:10px; 
+                    font-size:22px; 
+                    letter-spacing:4px; 
+                    color:#008a5c;">
+        </div>
+
+        <p style="margin-top:25px; font-size:12px; color:#777;">
+            © 2026 Samuel López Melián
+        </p>
+    </div>
+
+    <!-- AUTORÍA FIJA -->
+    <footer id="autor">
+        © 2026 Samuel López Melián
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
